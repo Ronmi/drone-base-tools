@@ -6,3 +6,5 @@ RUN apt-get update \
             ca-certificates wget curl ssh git \
  && apt-get clean \
  && rm -fr /var/lib/apt/lists/*
+
+RUN echo '    StrictHostKeyChecking no' >> /etc/ssh/ssh_config
